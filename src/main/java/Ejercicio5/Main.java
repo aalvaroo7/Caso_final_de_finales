@@ -3,12 +3,16 @@ package Ejercicio5;
 import Ejercicio5.Email;
 import Ejercicio5.UserAccount;
 import Ejercicio5.Utils;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
 
 public class Main {
     private static List<UserAccount> users = new ArrayList<>();

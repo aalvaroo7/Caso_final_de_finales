@@ -9,7 +9,15 @@ public class DirectMessage extends Tweet {
         super(time, message, sender);
         this.receiver = receiver;
     }
+    public UserAccount getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(UserAccount receiver) {
+        this.receiver = receiver;
+    }
 }
 
-// Métodos de acceso y modificación (getters y setters)
+
+
 // Implementación del método toString()

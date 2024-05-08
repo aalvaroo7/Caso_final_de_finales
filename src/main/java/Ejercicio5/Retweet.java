@@ -9,6 +9,13 @@ public class Retweet extends Tweet {
         super(time, message, sender);
         this.retweetedTweet = retweetedTweet;
     }
-    // Métodos de acceso y modificación (getters y setters)
+
+    public Tweet getRetweetedTweet() {
+        return retweetedTweet;
+    }
+
+    public void setRetweetedTweet(Tweet retweetedTweet) {
+        this.retweetedTweet = retweetedTweet;
+    }
     // Implementación del método toString()
 }

@@ -15,6 +15,32 @@ public class Tweet {
         this.message = message;
         this.sender = sender;
     }
-    // Métodos de acceso y modificación (getters y setters)
+    public LocalDate getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDate time) {
+        this.time = time;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        if (message.length() > 140) {
+            throw new IllegalArgumentException("El mensaje no puede tener más de 140 caracteres");
+        }
+        this.message = message;
+    }
+
+    public UserAccount getSender() {
+        return sender;
+    }
+
+    public void setSender(UserAccount sender) {
+        this.sender = sender;
+    }
+
     // Implementación del método toString()
 }

@@ -69,7 +69,18 @@ class MainTest {
 
     @Test
     void testSentinelSearch() {
+        // Asegúrate de que el usuario con este alias exista en la lista de usuarios
+        String testAlias = "existingUserAlias";
 
+        // Carga los usuarios desde el archivo
+        Main.loadUsersFromFile();
+
+        // Busca el usuario con el alias de prueba
+        UserAccount user = Main.sentinelSearch(testAlias);
+
+        // Verifica que el usuario devuelto no es nulo y tiene el alias correcto
+        assertNotNull(user, "The returned user should not be null");
+        assertEquals(testAlias, user.getAlias(), "The alias of the returned user should match the test alias");
     }
 
     @Test

@@ -86,7 +86,7 @@ public class Main {
         }
     }
 
-    private static UserAccount sentinelSearch(String alias) {
+    public static UserAccount sentinelSearch(String alias) {
         UserAccount sentinel = new UserAccount(alias, null);
         users.add(sentinel);
         int i = 0;

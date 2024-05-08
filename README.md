@@ -204,3 +204,11 @@ pero a pesar de esto la funcion B tiene mayores resultados en funcion de n que l
 a) Para corregir el código y realizar la operación de potenciación correctamente, donde 'a' es la base y 'b' es el exponente, debes cambiar la base de la recursión. En lugar de multiplicar 'a' por la llamada recursiva, debes multiplicar el resultado de la llamada recursiva por sí misma.
 
 b) El cálculo que está haciendo es una potenciación, donde ‘a’ es la base y ‘b’ es el exponente. Sin embargo, dado que la base es 1, el resultado siempre será 1, independientemente del valor del exponente.
+
+## Ejercicio 4) 
+
+El tipo de recursividad que se está empleando es la recursividad lineal. En este tipo de recursividad, una función se llama a sí misma una vez en su cuerpo.  En cuanto a la complejidad computacional, el algoritmo tiene una complejidad de tiempo de O(d), donde d es el número de dígitos en el número. Esto se debe a que la función se llama a sí misma una vez por cada dígito en el número.
+
+en cuanto a la ejecucion del progama, este es posible ejecutarlo en el propio Suma_de_dos_digitos_recursiva.java y no seria necesario recurrir a ella en el main correspoondiente del proyecto :)
+
+## Ejercicio 5)

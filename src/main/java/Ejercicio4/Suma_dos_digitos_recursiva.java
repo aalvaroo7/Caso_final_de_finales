@@ -1,3 +1,5 @@
+package Ejercicio4;
+
 public class Suma_dos_digitos_recursiva {
     public static void main(String[] args) {
         int number = 102;

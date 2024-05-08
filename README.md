@@ -218,7 +218,7 @@ Parte 2 respuesta a la cuestion planteada en el apartado d)
 
 • No es necesario modificar el método tweet(Tweet tweet1) de la clase UserAccount para que pueda enviar también objetos de tipo Retweet. Al igual que con los atributos timeline y tweets, esto se debe a que Retweet es una subclase de Tweet. En Java, un método que acepta un parámetro de una superclase puede recibir un objeto de cualquier subclase. Por lo tanto, un método que acepta un Tweet puede recibir un Retweet. Sin embargo, si necesitas realizar operaciones específicas de Retweet dentro del método tweet(), entonces tendrías que verificar el tipo del objeto y hacer un casting apropiado.
 
-Explicacion del desarrollo del codigo para la aplicacion Twitter(ahora X) y sus distintos modulos asi como metodos:
+## Explicacion del desarrollo del codigo para la aplicacion Twitter(ahora X) y sus distintos modulos asi como metodos:
 
 Este proyecto de Java consta de varias clases que simulan una versión simplificada de una red social como Twitter. Aquí está una descripción de cada clase y su propósito:  
 
@@ -242,5 +242,6 @@ Esta clase contiene métodos de utilidad que se utilizan en todo el proyecto. Po
 
 Main.java:
 Esta es la clase principal del proyecto. Contiene el método main(), que es el punto de entrada del programa. Esta clase maneja la interacción con el usuario, como cargar usuarios de un archivo, permitir al usuario cargar un usuario en memoria, publicar un tweet, y ordenar los usuarios por correo electrónico.  
+
 El código proporcionado en Main.java implementa un menú de opciones que permite al usuario cargar un usuario en memoria, publicar un tweet y ordenar los usuarios por correo electrónico. También implementa una búsqueda secuencial con centinela para buscar un usuario en la lista de usuarios.
 

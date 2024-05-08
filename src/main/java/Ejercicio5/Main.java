@@ -9,8 +9,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // Cargar la lista de usuarios de un fichero
         List<UserAccount> users = cargarUsuariosDesdeArchivo();
+        UserAccount user = getUser();
+        publicarTweet(user);
+        ordenarUsuariosPorEmail(users);
 
         // Menú de opciones
         int opcion;
@@ -37,7 +39,8 @@ public class Main {
                     break;
             }
         } while (opcion != 0);
-        ejecutarAcciones();
+
+
     }
 
     private static List<UserAccount> cargarUsuariosDesdeArchivo() {
@@ -116,15 +119,6 @@ public class Main {
         String emailString = Utils.readString(); // Assuming Utils has a method to read strings
         Email email = new Email(emailString); // Assuming Email has a constructor that takes a String
         return new UserAccount(alias, email);
-    }
-    public static void ejecutarAcciones() {
-        // Asumiendo que tienes una lista de usuarios y un usuario específico
-        List<UserAccount> users = cargarUsuariosDesdeArchivo();
-        UserAccount user = getUser(); // Asumiendo que este método devuelve un objeto UserAccount
-
-        // Ahora puedes llamar a los métodos con los argumentos correctos
-        publicarTweet(user);
-        ordenarUsuariosPorEmail(users);
     }
 
 }

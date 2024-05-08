@@ -16,8 +16,18 @@ public class DirectMessage extends Tweet {
     public void setReceiver(UserAccount receiver) {
         this.receiver = receiver;
     }
+    @Override
+    public String toString() {
+        return "DirectMessage{" +
+                "receiver=" + receiver.getAlias() +
+                ", time=" + getTime() +
+                ", message='" + getMessage() + '\'' +
+                ", sender=" + getSender().getAlias() +
+                '}';
+    }
 }
 
 
 
-// Implementación del método toString()
+
+

@@ -41,6 +41,12 @@ public class Tweet {
     public void setSender(UserAccount sender) {
         this.sender = sender;
     }
-
-    // Implementación del método toString()
+    @Override
+    public String toString() {
+        return "Tweet{" +
+                "time=" + time +
+                ", message='" + message + '\'' +
+                ", sender=" + sender.getAlias() +
+                '}';
+    }
 }

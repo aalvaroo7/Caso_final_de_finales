@@ -17,5 +17,13 @@ public class Retweet extends Tweet {
     public void setRetweetedTweet(Tweet retweetedTweet) {
         this.retweetedTweet = retweetedTweet;
     }
-    // Implementación del método toString()
+    @Override
+    public String toString() {
+        return "Retweet{" +
+                "retweetedTweet=" + retweetedTweet +
+                ", time=" + getTime() +
+                ", message='" + getMessage() + '\'' +
+                ", sender=" + getSender().getAlias() +
+                '}';
+    }
 }

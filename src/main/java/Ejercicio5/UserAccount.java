@@ -13,6 +13,8 @@ public class UserAccount {
     private Set<UserAccount> following;
     private List<Tweet> tweets;
     private List<Tweet> timeline;
+
+
     public UserAccount(String alias, Email email) {
         // Comprobar que el alias solo contiene números y/o letras
         if (!Utils.isValidAlias(alias)) {

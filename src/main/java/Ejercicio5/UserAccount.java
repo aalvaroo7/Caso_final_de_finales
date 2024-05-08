@@ -22,7 +22,9 @@ public class UserAccount {
         this.followers = new ArrayList<>();
         this.following = new ArrayList<>();
     }
-
+    public String getEmail() {
+        return email;
+    }
     public void follow(UserAccount user) {
         if (!following.contains(user)) {
             following.add(user);

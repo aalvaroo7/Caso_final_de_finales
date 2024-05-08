@@ -1,6 +1,8 @@
 package Ejercicio5;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -37,5 +39,22 @@ public class Main {
 
         // Si no encontramos el usuario, devolvemos null
         return null;
+    }
+    public static void publishTweet(UserAccount user, String message) {
+        try {
+            Tweet tweet = new Tweet(message, user);
+            user.tweet(tweet);
+            System.out.println("Tweet publicado: " + tweet);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error al publicar el tweet: " + e.getMessage());
+        }
+    }
+    public static void sortUsersByEmail(List<UserAccount> users) {
+        Collections.sort(users, new Comparator<UserAccount>() {
+            @Override
+            public int compare(UserAccount user1, UserAccount user2) {
+                return user1.getEmail().compareTo(user2.getEmail());
+            }
+        });
     }
 }

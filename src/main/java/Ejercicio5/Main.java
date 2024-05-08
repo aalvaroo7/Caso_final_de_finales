@@ -1,4 +1,8 @@
 package Ejercicio5;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -34,14 +38,27 @@ public class Main {
     }
 
     private static List<UserAccount> cargarUsuariosDesdeArchivo() {
-        // Implementación de la carga de usuarios desde un archivo
-        // Utilizar las estructuras de datos más adecuadas
-        // Justificar el uso de dichas estructuras
+        List<UserAccount> users = new ArrayList<>();
+        try {
+            List<String> lines = Files.readAllLines(Paths.get("users.txt"));
+            for (String line : lines) {
+                String[] details = line.split(",");
+                String alias = details[0];
+                Email email = new Email(details[1]); // Assuming Email has a constructor that takes a String
+                users.add(new UserAccount(alias, email));
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading users file: " + e.getMessage());
+        }
+        return users;
     }
 
     private static int mostrarMenuYObtenerOpcion() {
         // Implementación del menú y obtención de la opción del usuario
         // Utilizar los métodos de la clase Utils para la lectura de datos
+
+        // Placeholder return statement
+        return 0;
     }
 
     private static void cargarUsuario(List<UserAccount> users) {

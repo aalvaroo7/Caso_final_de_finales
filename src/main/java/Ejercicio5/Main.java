@@ -70,7 +70,7 @@ public class Main {
         }
     }
 
-    private static void publishTweet() {
+    public static void publishTweet() {
         if (currentUser == null) {
             System.out.println("No user is loaded in memory.");
             return;

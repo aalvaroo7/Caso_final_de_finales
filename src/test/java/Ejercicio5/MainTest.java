@@ -44,14 +44,32 @@ class MainTest {
     }
     @Test
     void testPublishTweet() {
+        // Asegúrate de que el usuario con este alias exista en la lista de usuarios
+        String testAlias = "existingUserAlias";
 
+        // Simula la entrada del usuario
+        ByteArrayInputStream in = new ByteArrayInputStream(testAlias.getBytes());
+        System.setIn(in);
+
+        Main.loadUserInMemory();
+        UserAccount userBeforeTweet = Main.getCurrentUser();
+        int initialTweetCount = userBeforeTweet.getTweets().size();
+
+        // Simula la entrada del contenido del tweet
+        String tweetContent = "Test tweet\n";
+        ByteArrayInputStream tweetIn = new ByteArrayInputStream(tweetContent.getBytes());
+        System.setIn(tweetIn);
+
+        Main.publishTweet();
+        UserAccount userAfterTweet = Main.getCurrentUser();
+        int finalTweetCount = userAfterTweet.getTweets().size();
+
+        assertEquals(initialTweetCount + 1, finalTweetCount, "After publishing a tweet, the tweet count of the current user should increase by 1");
     }
 
     @Test
     void testSentinelSearch() {
-        // Implementa la lógica de prueba para el método sentinelSearch.
-        // Podrías, por ejemplo, verificar que este método devuelve el usuario correcto
-        // cuando se le da un alias de usuario válido.
+
     }
 
     @Test

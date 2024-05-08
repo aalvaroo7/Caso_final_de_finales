@@ -1,8 +1,5 @@
 package Ejercicio5;
 
-import Ejercicio5.Tweet;
-import Ejercicio5.UserAccount;
-
 public class Retweet extends Tweet {
     private Tweet retweetedTweet;
 
@@ -11,5 +8,11 @@ public class Retweet extends Tweet {
         this.retweetedTweet = retweetedTweet;
     }
 
-    // ... getters and setters ...
+    public Tweet getRetweetedTweet() {
+        return retweetedTweet;
+    }
+
+    public void setRetweetedTweet(Tweet retweetedTweet) {
+        this.retweetedTweet = retweetedTweet;
+    }
 }

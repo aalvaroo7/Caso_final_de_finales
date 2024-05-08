@@ -214,6 +214,33 @@ en cuanto a la ejecucion del progama, este es posible ejecutarlo en el propio Su
 ## Ejercicio 5)
 Parte 2 respuesta a la cuestion planteada en el apartado d)
 
-Sí, se deberá modificar los atributos timeline y tweets de la clase UserAccount para que puedan contener objetos de tipo Retweet. Esto se debe a que los usuarios pueden retweetear mensajes, y estos retweets deben ser almacenados tanto en el historial de tweets del usuario como en el timeline de sus seguidores.
+• No es necesario modificar los atributos timeline y tweets de la clase UserAccount para que contengan elementos de la clase hija Retweet. Esto se debe a que Retweet es una subclase de Tweet, por lo que un Retweet es un Tweet. En Java, una lista de una superclase puede contener objetos de cualquier subclase. Por lo tanto, una List<Tweet> puede contener objetos Tweet y cualquier objeto de una clase que extienda Tweet, como Retweet.
 
-Sí, se deberá modificar el método tweet(Tweet tweet1) de la clase UserAccount para que pueda recibir tanto objetos de tipo Tweet como objetos de tipo Retweet. Esto permitirá a los usuarios retweetear mensajes, lo cual es una funcionalidad importante en Twitter.
+• No es necesario modificar el método tweet(Tweet tweet1) de la clase UserAccount para que pueda enviar también objetos de tipo Retweet. Al igual que con los atributos timeline y tweets, esto se debe a que Retweet es una subclase de Tweet. En Java, un método que acepta un parámetro de una superclase puede recibir un objeto de cualquier subclase. Por lo tanto, un método que acepta un Tweet puede recibir un Retweet. Sin embargo, si necesitas realizar operaciones específicas de Retweet dentro del método tweet(), entonces tendrías que verificar el tipo del objeto y hacer un casting apropiado.
+
+Explicacion del desarrollo del codigo para la aplicacion Twitter(ahora X) y sus distintos modulos asi como metodos:
+
+Este proyecto de Java consta de varias clases que simulan una versión simplificada de una red social como Twitter. Aquí está una descripción de cada clase y su propósito:  
+
+UserAccount.java: 
+Esta clase representa una cuenta de usuario en la red social. Cada cuenta de usuario tiene un alias, un email, una lista de seguidores, una lista de usuarios a los que sigue, una lista de tweets que ha publicado y una línea de tiempo de tweets.  
+
+Tweet.java: 
+Esta clase representa un tweet en la red social. Cada tweet tiene una fecha y hora, un mensaje y un remitente.  
+
+DirectMessage.java:
+Esta clase hereda de Tweet y representa un mensaje directo en la red social. Un mensaje directo es un tipo especial de tweet que tiene un destinatario.  
+
+Retweet.java: E
+sta clase también hereda de Tweet y representa un retweet en la red social. Un retweet es un tipo especial de tweet que tiene un tweet original que está siendo retuiteado.  
+
+Email.java: 
+Esta clase representa un correo electrónico. Se utiliza para almacenar la dirección de correo electrónico de una cuenta de usuario.  
+
+Utils.java: 
+Esta clase contiene métodos de utilidad que se utilizan en todo el proyecto. Por ejemplo, tiene métodos para leer una cadena o un entero de la entrada estándar, y métodos para validar un alias o un correo electrónico.  
+
+Main.java:
+Esta es la clase principal del proyecto. Contiene el método main(), que es el punto de entrada del programa. Esta clase maneja la interacción con el usuario, como cargar usuarios de un archivo, permitir al usuario cargar un usuario en memoria, publicar un tweet, y ordenar los usuarios por correo electrónico.  
+El código proporcionado en Main.java implementa un menú de opciones que permite al usuario cargar un usuario en memoria, publicar un tweet y ordenar los usuarios por correo electrónico. También implementa una búsqueda secuencial con centinela para buscar un usuario en la lista de usuarios.
+

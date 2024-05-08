@@ -2,17 +2,15 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int a = recursive(1, 2);
+        int a = power(2, 3); // 2 to the power of 3
         System.out.println(a);
     }
 
-    public static int recursive(int a, int b) {
-        if (b == 0) {
+    public static int power(int base, int exponent) {
+        if (exponent == 0) {
             return 1;
-        } else if (a == 0) {
-            return 0;
         } else {
-            return a * recursive(a, b - 1);
+            return base * power(base, exponent - 1);
         }
     }
 }

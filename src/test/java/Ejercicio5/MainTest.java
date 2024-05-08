@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
+import java.util.List;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -85,8 +86,20 @@ class MainTest {
 
     @Test
     void testSortUsersByEmail() {
-        // Implementa la lógica de prueba para el método sortUsersByEmail.
-        // Podrías, por ejemplo, verificar que después de llamar a este método,
-        // los usuarios están ordenados correctamente por correo electrónico.
+        // Carga los usuarios desde el archivo
+        Main.loadUsersFromFile();
+
+        // Ordena los usuarios por correo electrónico
+        Main.sortUsersByEmail();
+
+        // Obtiene la lista de usuarios
+        List<UserAccount> users = Main.getUsers();
+
+        // Verifica que la lista está ordenada por correo electrónico
+        for (int i = 0; i < users.size() - 1; i++) {
+            String email1 = users.get(i).getEmail().getAddress();
+            String email2 = users.get(i + 1).getEmail().getAddress();
+            assertTrue(email1.compareTo(email2) <= 0, "The users should be sorted by email");
+        }
     }
 }

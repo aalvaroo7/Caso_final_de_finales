@@ -100,7 +100,7 @@ public class Main {
             return users.get(i);
         }
     }
-    private static void sortUsersByEmail() {
+    public static void sortUsersByEmail() {
         Collections.sort(users, new Comparator<UserAccount>() {
             @Override
             public int compare(UserAccount user1, UserAccount user2) {

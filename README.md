@@ -199,3 +199,8 @@ A requerirá menos operaciones que la función
 B para el mismo tamaño de entrada.
 
 pero a pesar de esto la funcion B tiene mayores resultados en funcion de n que la funcion A al ser 16n elevado al cubo
+
+## Ejercicio 3)(codigo que itera varias veces una variable) 
+a) Para corregir el código y realizar la operación de potenciación correctamente, donde 'a' es la base y 'b' es el exponente, debes cambiar la base de la recursión. En lugar de multiplicar 'a' por la llamada recursiva, debes multiplicar el resultado de la llamada recursiva por sí misma.
+
+b) El cálculo que está haciendo es una potenciación, donde ‘a’ es la base y ‘b’ es el exponente. Sin embargo, dado que la base es 1, el resultado siempre será 1, independientemente del valor del exponente.

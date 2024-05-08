@@ -214,6 +214,6 @@ en cuanto a la ejecucion del progama, este es posible ejecutarlo en el propio Su
 ## Ejercicio 5)
 Parte 2 respuesta a la cuestion planteada en el apartado d)
 
-• No es necesario modificar los atributos timeline y tweets de la clase UserAccount para que contengan elementos de la clase hija Retweet. Esto se debe a que Retweet es una subclase de Tweet, por lo que un objeto Retweet es también un objeto Tweet. En Java, una lista de una superclase puede contener objetos de cualquier subclase de esa superclase. Por lo tanto, una List<Tweet> puede contener objetos Tweet, DirectMessage y Retweet.  
+Sí, se deberá modificar los atributos timeline y tweets de la clase UserAccount para que puedan contener objetos de tipo Retweet. Esto se debe a que los usuarios pueden retweetear mensajes, y estos retweets deben ser almacenados tanto en el historial de tweets del usuario como en el timeline de sus seguidores.
 
-• No es necesario modificar el método tweet(Tweet tweet1) de la clase UserAccount para que pueda enviar también objetos de tipo Retweet. Al igual que con los atributos timeline y tweets, esto se debe a que Retweet es una subclase de Tweet. En Java, un método que acepta un objeto de una superclase también puede aceptar objetos de cualquier subclase de esa superclase. Por lo tanto, un método que acepta un Tweet también puede aceptar un Retweet.
+Sí, se deberá modificar el método tweet(Tweet tweet1) de la clase UserAccount para que pueda recibir tanto objetos de tipo Tweet como objetos de tipo Retweet. Esto permitirá a los usuarios retweetear mensajes, lo cual es una funcionalidad importante en Twitter.

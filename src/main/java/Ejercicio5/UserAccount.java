@@ -1,5 +1,8 @@
 package Ejercicio5;
 
+import java.util.List;
+import java.util.Set;
+
 public class UserAccount {
     private String alias;
     private Email email;
@@ -7,8 +10,22 @@ public class UserAccount {
     private Set<UserAccount> following;
     private List<Tweet> tweets;
     private List<Tweet> timeline;
-
-    // Existing code...
+    public UserAccount(String alias, Email email) {
+        // Comprobar que el alias solo contiene números y/o letras
+        if (!Utils.isValidAlias(alias)) {
+            throw new IllegalArgumentException("El alias no es válido");
+        }
+        // Comprobar que el email contiene el carácter '@'
+        if (!Utils.isValidEmail(email)) {
+            throw new IllegalArgumentException("El email no es válido");
+        }
+        this.alias = alias;
+        this.email = email;
+        this.followers = new HashSet<>();
+        this.following = new HashSet<>();
+        this.tweets = new ArrayList<>();
+        this.timeline = new ArrayList<>();
+    }
 
     public String getAlias() {
         return alias;

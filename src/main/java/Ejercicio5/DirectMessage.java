@@ -8,5 +8,11 @@ public class DirectMessage extends Tweet {
         this.receiver = receiver;
     }
 
-    // ... getters and setters ...
+    public UserAccount getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(UserAccount receiver) {
+        this.receiver = receiver;
+    }
 }

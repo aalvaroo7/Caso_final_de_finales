@@ -108,4 +108,12 @@ public class Main {
     private static void ordenarUsuariosPorAlias(List<UserAccount> users) {
         users.sort(Comparator.comparing(UserAccount::getAlias));
     }
+    private static UserAccount getUser() {
+        System.out.print("Ingrese el alias del usuario: ");
+        String alias = Utils.readString(); // Assuming Utils has a method to read strings
+        System.out.print("Ingrese el email del usuario: ");
+        String emailString = Utils.readString(); // Assuming Utils has a method to read strings
+        Email email = new Email(emailString); // Assuming Email has a constructor that takes a String
+        return new UserAccount(alias, email);
+    }
 }

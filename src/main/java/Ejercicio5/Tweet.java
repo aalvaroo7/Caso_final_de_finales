@@ -18,5 +18,3 @@ public class Tweet {
     // Métodos de acceso y modificación (getters y setters)
     // Implementación del método toString()
 }
-
-

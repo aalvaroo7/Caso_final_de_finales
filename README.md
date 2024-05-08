@@ -245,3 +245,5 @@ Esta es la clase principal del proyecto. Contiene el método main(), que es el p
 
 El código proporcionado en Main.java implementa un menú de opciones que permite al usuario cargar un usuario en memoria, publicar un tweet y ordenar los usuarios por correo electrónico. También implementa una búsqueda secuencial con centinela para buscar un usuario en la lista de usuarios.
 
+### Ademas de lo requerido por el ejercicio 5 He desarrollado un Progama llamado MainGUI que al ejecutralo muestra una interfaz gráfica en la que se nos permite ordenar usuarios,introducirlos y publicar tweets
+

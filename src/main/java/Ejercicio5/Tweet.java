@@ -3,34 +3,48 @@ package Ejercicio5;
 import java.time.LocalDateTime;
 
 public class Tweet {
-    private String content;
-    private LocalDateTime timestamp;
-    private UserAccount user;
+    protected String message;
+    protected LocalDateTime time;
+    protected UserAccount sender;
 
-    public Tweet(String content, UserAccount user) {
-        this.content = content;
-        this.user = user;
-        this.timestamp = LocalDateTime.now();
+    public Tweet(String message, UserAccount sender) {
+        if (message.length() > 140) {
+            throw new IllegalArgumentException("Message cannot exceed 140 characters");
+        }
+        this.message = message;
+        this.sender = sender;
+        this.time = LocalDateTime.now();
     }
 
-    public String getContent() {
-        return content;
+    public String getMessage() {
+        return message;
     }
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
+    public void setMessage(String message) {
+        if (message.length() > 140) {
+            throw new IllegalArgumentException("Message cannot exceed 140 characters");
+        }
+        this.message = message;
     }
 
-    public UserAccount getUser() {
-        return user;
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public UserAccount getSender() {
+        return sender;
+    }
+
+    public void setSender(UserAccount sender) {
+        this.sender = sender;
     }
 
     @Override
     public String toString() {
         return "Tweet{" +
-                "content='" + content + '\'' +
-                ", timestamp=" + timestamp +
-                ", user=" + user.getAlias() +
+                "message='" + message + '\'' +
+                ", time=" + time +
+                ", sender=" + sender +
                 '}';
     }
 }

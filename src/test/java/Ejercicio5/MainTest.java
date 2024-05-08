@@ -44,9 +44,7 @@ class MainTest {
     }
     @Test
     void testPublishTweet() {
-        // Implementa la lógica de prueba para el método publishTweet.
-        // Podrías, por ejemplo, verificar que después de llamar a este método,
-        // el número de tweets del usuario actual ha aumentado en uno.
+
     }
 
     @Test

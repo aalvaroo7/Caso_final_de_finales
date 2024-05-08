@@ -58,7 +58,7 @@ public class Main {
 
     private static UserAccount currentUser = null;
 
-    private static void loadUserInMemory() {
+    public static void loadUserInMemory() {
         System.out.print("Enter the user alias: ");
         String alias = Utils.readString();
         UserAccount user = sentinelSearch(alias);
@@ -117,5 +117,8 @@ public class Main {
         System.out.print("Enter the desired option: ");
         int option = scanner.nextInt();
         return option;
+    }
+    public static UserAccount getCurrentUser() {
+        return currentUser;
     }
 }

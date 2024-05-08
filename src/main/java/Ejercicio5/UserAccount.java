@@ -50,4 +50,25 @@ public class UserAccount {
                 ", email='" + email + '\'' +
                 '}';
     }
+    public static UserAccount findUser(List<UserAccount> users, String alias) {
+        // Añadimos el centinela al final de la lista
+        UserAccount sentinel = new UserAccount(alias, "sentinel@example.com");
+        users.add(sentinel);
+
+        int i = 0;
+        while (!users.get(i).getAlias().equals(alias)) {
+            i++;
+        }
+
+        // Eliminamos el centinela
+        users.remove(users.size() - 1);
+
+        // Si encontramos el usuario antes del centinela, devolvemos el usuario
+        if (i != users.size()) {
+            return users.get(i);
+        }
+
+        // Si no encontramos el usuario, devolvemos null
+        return null;
+    }
 }

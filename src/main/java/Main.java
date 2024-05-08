@@ -1,4 +1,5 @@
-package Ejercicio5;
+import Ejercicio5.Tweet;
+import Ejercicio5.UserAccount;
 
 import java.util.ArrayList;
 import java.util.Collections;

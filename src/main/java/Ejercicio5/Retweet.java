@@ -7,12 +7,21 @@ public class Retweet extends Tweet {
         super(message, sender);
         this.retweetedTweet = retweetedTweet;
     }
-
     public Tweet getRetweetedTweet() {
         return retweetedTweet;
     }
 
     public void setRetweetedTweet(Tweet retweetedTweet) {
         this.retweetedTweet = retweetedTweet;
+    }
+
+    @Override
+    public String toString() {
+        return "Retweet{" +
+                "message='" + message + '\'' +
+                ", time=" + time +
+                ", sender=" + sender +
+                ", retweetedTweet=" + retweetedTweet +
+                '}';
     }
 }

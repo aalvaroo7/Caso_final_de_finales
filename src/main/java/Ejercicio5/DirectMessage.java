@@ -15,4 +15,14 @@ public class DirectMessage extends Tweet {
     public void setReceiver(UserAccount receiver) {
         this.receiver = receiver;
     }
+
+    @Override
+    public String toString() {
+        return "DirectMessage{" +
+                "message='" + message + '\'' +
+                ", time=" + time +
+                ", sender=" + sender +
+                ", receiver=" + receiver +
+                '}';
+    }
 }

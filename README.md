@@ -212,3 +212,8 @@ El tipo de recursividad que se está empleando es la recursividad lineal. En est
 en cuanto a la ejecucion del progama, este es posible ejecutarlo en el propio Suma_de_dos_digitos_recursiva.java y no seria necesario recurrir a ella en el main correspoondiente del proyecto :)
 
 ## Ejercicio 5)
+Parte 2 respuesta a la cuestion planteada en el apartado d)
+
+• No es necesario modificar los atributos timeline y tweets de la clase UserAccount para que contengan elementos de la clase hija Retweet. Esto se debe a que Retweet es una subclase de Tweet, por lo que un objeto Retweet es también un objeto Tweet. En Java, una lista de una superclase puede contener objetos de cualquier subclase de esa superclase. Por lo tanto, una List<Tweet> puede contener objetos Tweet, DirectMessage y Retweet.  
+
+• No es necesario modificar el método tweet(Tweet tweet1) de la clase UserAccount para que pueda enviar también objetos de tipo Retweet. Al igual que con los atributos timeline y tweets, esto se debe a que Retweet es una subclase de Tweet. En Java, un método que acepta un objeto de una superclase también puede aceptar objetos de cualquier subclase de esa superclase. Por lo tanto, un método que acepta un Tweet también puede aceptar un Retweet.

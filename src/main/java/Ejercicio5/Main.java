@@ -8,10 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     private static List<UserAccount> users = new ArrayList<>();
@@ -37,7 +34,7 @@ public class Main {
         } while (option != 0);
     }
 
-    private static void loadUsersFromFile() {
+    public static void loadUsersFromFile() {
         try {
             List<String> lines = Files.readAllLines(Paths.get("users.txt"));
             for (String line : lines) {
@@ -110,5 +107,15 @@ public class Main {
                 return user1.getEmail().getAddress().compareTo(user2.getEmail().getAddress());
             }
         });
+    }
+    public static List<UserAccount> getUsers() {
+        return users;
+    }
+    public static int showMenuAndGetOption(Scanner scanner) {
+        System.out.println("1. Load user in memory");
+        System.out.println("0. Exit");
+        System.out.print("Enter the desired option: ");
+        int option = scanner.nextInt();
+        return option;
     }
 }
